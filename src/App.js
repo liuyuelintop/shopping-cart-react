@@ -4,17 +4,21 @@ import Navbar from './Components/Navbar/Navbar';
 import Shop from './Pages/Shop/Shop';
 import Cart from './Pages/Cart/Cart';
 import { ShopContextProvider } from './Context/ShopContext';
+import Contact from './Pages/Contact';
+
 function App() {
+
   return (
     <div className="App">
       <ShopContextProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Shop/>}/>
-          <Route path='/cart' element={<Cart/>}/>
-        </Routes>
-      </Router>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Shop/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/contact" element={<Contact />}/>
+          </Routes>
+        </Router>
       </ShopContextProvider>
     </div>
   );
